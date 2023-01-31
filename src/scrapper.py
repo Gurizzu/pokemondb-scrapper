@@ -46,4 +46,7 @@ for pokemon in pokemon_rows[0:5]:
     entry_page_html = urlopen(request).read().decode('utf-8')
     entry_soup = BeautifulSoup(entry_page_html, "html.parser")
     
+    entry_text = entry_soup.find_all("main")[0].find_all("div", {"class",  "resp-scroll"})[2].find_all("tr")[0].getText()
+    print(e)
+    
     
